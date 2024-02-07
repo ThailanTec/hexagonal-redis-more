@@ -3,8 +3,8 @@ package services
 import (
 	"github.com/ThailanTec/poc-serasa/internal/core/domain"
 	"github.com/ThailanTec/poc-serasa/internal/core/ports"
-	"github.com/ThailanTec/poc-serasa/pkg"
-	erros "github.com/ThailanTec/poc-serasa/pkg/errs"
+	"github.com/ThailanTec/poc-serasa/utils"
+	erros "github.com/ThailanTec/poc-serasa/utils/errs"
 )
 
 type UserService struct {
@@ -23,7 +23,7 @@ func (u *UserService) CreateUser(name, email string) (domain.User, error) {
 	}
 
 	nUser := domain.User{
-		ID:    pkg.GerenrateID(),
+		ID:    utils.GerenrateID(),
 		Name:  name,
 		Email: email,
 	}

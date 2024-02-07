@@ -2,10 +2,10 @@ package main
 
 import (
 	"flag"
+	"github.com/ThailanTec/poc-serasa/pkg/handler"
 	"log"
 	"os"
 
-	"github.com/ThailanTec/poc-serasa/adapter/handler"
 	"github.com/ThailanTec/poc-serasa/adapter/repository/postgres"
 	"github.com/ThailanTec/poc-serasa/internal/core/domain"
 	"github.com/ThailanTec/poc-serasa/internal/core/services"

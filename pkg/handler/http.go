@@ -1,12 +1,12 @@
 package handler
 
 import (
+	erros "github.com/ThailanTec/poc-serasa/utils/errs"
 	"net/http"
 	"strconv"
 
 	"github.com/ThailanTec/poc-serasa/internal/core/domain"
 	"github.com/ThailanTec/poc-serasa/internal/core/services"
-	erros "github.com/ThailanTec/poc-serasa/pkg/errs"
 	"github.com/gin-gonic/gin"
 )
 

@@ -2,9 +2,9 @@ package postgres
 
 import (
 	"fmt"
+	erros "github.com/ThailanTec/poc-serasa/utils/errs"
 
 	"github.com/ThailanTec/poc-serasa/internal/core/domain"
-	erros "github.com/ThailanTec/poc-serasa/pkg/errs"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 )

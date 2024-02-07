@@ -1,10 +1,10 @@
 package postgres
 
 import (
+	erros "github.com/ThailanTec/poc-serasa/utils/errs"
 	"testing"
 
 	"github.com/ThailanTec/poc-serasa/internal/core/domain"
-	erros "github.com/ThailanTec/poc-serasa/pkg/errs"
 	"github.com/stretchr/testify/assert"
 )
 
