@@ -23,16 +23,15 @@ func NewHttpHandler(svc services.UserService) *HTTPHandler {
 func (h *HTTPHandler) CreateUser(ctx *gin.Context) {
 	var user domain.User
 	if err := ctx.ShouldBindJSON(&user); err != nil {
-		ctx.JSON(http.StatusBadRequest, gin.H{
-			"Error": err,
-		})
-
+		// Construa a resposta de erro com uma mensagem significativa
+		errorResponse := erros.CustomError("Erro ao fazer Shouldbind")
+		ctx.JSON(http.StatusBadRequest, errorResponse)
 		return
 	}
 
 	usr, err := h.svc.CreateUser(user.Name, user.Email)
 	if err != nil {
-		ctx.JSON(http.StatusBadRequest, erros.BadRequest("Não foi possivel criar usuário"))
+		ctx.JSON(http.StatusBadRequest, "Errooou")
 		return
 	}
 
@@ -44,9 +43,8 @@ func (h *HTTPHandler) GetUserByID(ctx *gin.Context) {
 	nId, _ := strconv.Atoi(id)
 
 	user, err := h.svc.GetUserByID(nId)
-
 	if err != nil {
-		ctx.JSON(http.StatusBadRequest, erros.BadRequest("Não foi possivel localizar usuários"))
+		ctx.JSON(http.StatusBadRequest, err)
 		return
 	}
 
