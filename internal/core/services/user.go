@@ -4,7 +4,7 @@ import (
 	"github.com/ThailanTec/poc-serasa/internal/core/domain"
 	"github.com/ThailanTec/poc-serasa/internal/core/ports"
 	"github.com/ThailanTec/poc-serasa/pkg"
-	erros "github.com/ThailanTec/poc-serasa/pkg/errors"
+	erros "github.com/ThailanTec/poc-serasa/pkg/errs"
 )
 
 type UserService struct {

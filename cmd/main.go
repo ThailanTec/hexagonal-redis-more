@@ -5,8 +5,8 @@ import (
 	"log"
 	"os"
 
-	"github.com/ThailanTec/poc-serasa/internal/adapter/handler"
-	"github.com/ThailanTec/poc-serasa/internal/adapter/repository/postgres"
+	"github.com/ThailanTec/poc-serasa/adapter/handler"
+	"github.com/ThailanTec/poc-serasa/adapter/repository/postgres"
 	"github.com/ThailanTec/poc-serasa/internal/core/domain"
 	"github.com/ThailanTec/poc-serasa/internal/core/services"
 	"github.com/gin-gonic/gin"
