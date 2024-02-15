@@ -1,9 +1,10 @@
 package handler
 
 import (
-	erros "github.com/ThailanTec/poc-serasa/utils/errs"
 	"net/http"
 	"strconv"
+
+	erros "github.com/ThailanTec/poc-serasa/utils/errs"
 
 	"github.com/ThailanTec/poc-serasa/internal/core/domain"
 	"github.com/ThailanTec/poc-serasa/internal/core/services"
